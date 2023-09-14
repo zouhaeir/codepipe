@@ -1,0 +1,386 @@
+:root{
+    --mainColor: #16678E;
+    --headColor: #494A4A;
+    --scondaryColor: #102E51;
+}
+@font-face{
+    font-family: 'cairo';
+    src: url('../webfonts/Tajawal-Bold.ttf');
+}
+body{
+    font-family: 'cairo';
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none
+}
+.container{
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*My Frame Work*/
+
+.section-padding{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* small */
+@media (min-width:768px){
+    .container{
+        width:750px
+    }
+}
+/* medium */
+@media (min-width:992px){
+    .container{
+        width:970px
+    }
+}
+/* large */
+@media (min-width:1200px){
+    .container{
+        width:1170px
+    }
+}
+
+/* Start Header */
+.header{
+    height: 50px;
+    background-color: #eeefff;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header ul{
+    list-style: none;
+}
+.header h3{
+    font-weight: 600;
+    font-size:17px;
+    font-weight: bold;
+}
+.header ul li{
+    display: inline-block;
+    margin-left: 7px;
+    font-size: 12px;
+    position: relative;
+}
+.header ul li a{
+    color: #1C487D;
+    font-weight: bold;
+}
+.header ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width:0;
+    height: 2px;
+    background-color: #00BEAD;
+    transition: 0.5s
+}
+.header ul li a:hover::after{
+    width: 100%;
+}
+.header .col{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap
+}
+
+/* End header */
+/* Start Landing */
+.landing{
+    height: 630px !important;
+    background-image: linear-gradient(#16678E, #1C487D);
+    overflow: hidden;
+}
+.landing .row{
+    text-align: center;
+    max-width: 700px;
+    position: relative;
+    left: 50%;
+    transform:translate(-50%, 20%);
+    color: white;
+    max-height: 250px !important;
+}
+
+@media (max-width:500px){
+    .landing .row{
+        width:280px;
+    }
+}
+h3{
+    margin: 0;
+}
+.landing .row h3{
+    font-size: 40px;
+}
+
+.landing .row p{
+    line-height: 1.6;
+    font-size: 20px;
+}
+.landing .row button{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #F33F6A;
+    border-radius: 5px;
+    border:none;
+    padding:15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.landing .row button a {
+    color: white;
+}
+.landing .row button:hover{
+    background-color: #f33f6ae3;
+}
+.landing .image{
+    height:382px;
+    display: flex;  
+    justify-content: center;
+    align-items: flex-end;
+}
+@media (min-width:660px){
+    .landing .image{
+        position: relative;
+        bottom: -20px
+    }
+}
+.landing .image img{
+    width:85%;
+    max-width: 520px
+}
+
+@media (min-width:900px){
+    .landing{
+      height: 750px;
+    }
+    .landing img{
+        width:55%;
+    }
+}
+/* End Landing */
+/* Start Features */
+.features{
+    text-align: center;
+}
+.features .row{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.features h2 {
+    color: var(--headColor);
+    font-size:25px;
+}
+.features .row .feat{
+    margin-bottom: 30px;
+    margin-left: 7px;
+}
+.features .row .feat h3{
+    color: var(--headColor);
+    font-weight: bold;
+}
+.features .row .feat p{
+    font-size: 17px;
+    margin-top: 5px;
+    color:#646464;
+    line-height: 1.7;
+}
+.features .row span,
+.spans{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+    margin-bottom: 20px;
+}
+.features .row span i{
+    font-size:30px;
+    color:white;
+    margin: 15px 10px;
+}
+/* End Features */
+/* Start Feat-On */
+.feat-on{
+  background-color: var(--scondaryColor);
+  color: white;
+  text-align: center;
+}
+.feat-on h2 {
+  margin-bottom: 30px;
+}
+.feat-on .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 300px));
+    grid-row-gap: 50px;
+    place-items: center;
+    place-content: center;
+}
+.feat-on .content img{
+    width:130px;
+}
+/* End Feat-On */
+/* Start Games Section */
+.games h2{
+    text-align: center;
+    margin: 0;
+    color: var(--headColor);
+    transition: 0.5s;
+}
+.games .container{
+    text-align: center;
+}
+.games .cont {
+    -webkit-display:grid;
+    -moz-display:grid;
+    -ms-display:grid;
+    -o-display:grid;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 25px;
+    margin-top:40px;
+    max-width: 100%;
+}
+.games .cont .card {
+    background-color:var(--mainColor);
+    position: relative;
+    transition: all 0.4s;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.games .cont .card:hover{
+    margin-top: -10px;
+    margin-bottom: 10px;
+    box-shadow:  0 0 20px 1px #1c576996;
+}
+.games .cont .card img {
+  max-width: 100%;
+}
+.games .cont .card .info {
+  padding:20px;
+  text-align: center;
+}
+.games .cont .card .info p{
+    color: white;
+}
+.games .cont .card .info h3{
+    color: white;
+}
+/* End Games Section */
+/* Start Comment Section */
+.comments{
+    text-align: center;
+    background-color: #F1F5F9;
+}
+.comments span > i{
+    font-size:30px;
+    color:white;
+    margin: 17px 12px;
+}
+.comments h2{
+    color: var(--headColor);
+}
+.comments .com{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 25px;
+    margin-top:40px;
+}
+.comments .com .cont{
+    background-color: white;
+    padding: 25px;
+    color:#606060;
+    line-height: 1.6;
+    border-radius: 7px;
+    box-shadow:  0 0 7px 1px #618b9b4a;
+}
+.comments .com .cont span{
+    display: block;
+    color: #888;
+    margin-top: 10px; 
+}
+/* End Comment Section */
+/* Start Subscribe */
+.subscribe{
+    background-color: #16678E;
+    text-align: center;
+}
+.subscribe h2{
+    margin-top:0;
+    color: white;
+}
+.subscribe p{
+    color: white;
+    font-size: 18px;
+}
+.subscribe input {
+    border: none;
+    width: 100%;
+    max-width: 350px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.subscribe button {
+    border: none;
+    border-radius: 5px;
+    background-color: #F33F6A;
+    padding: 10px 17px;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin: 15px auto;
+    cursor: pointer;
+}
+.subscribe button a {
+    color: white;
+}
+.subscribe button:hover{
+    background-color: #F33F6AE3
+}
+/* End Subscribe */
+/* Start Footer */
+.footer{
+    background-color: var(--scondaryColor);
+    color: white;
+}
+.footer .foot{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.footer .foot span i{
+    margin-right: 8px;
+}
+.footer .foot .row span a,
+.footer .latest span a{
+    display: block;
+    width: fit-content;
+    color: white;
+    margin-bottom: 13px;
+    transition: 0.3s;
+    margin-left: 8px;
+}
+.footer .foot .row span a:hover,
+.footer .latest span a:hover{
+  margin-left: 15px;
+}
+.footer .latest{
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+/* End Footer */

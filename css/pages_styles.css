@@ -1,0 +1,110 @@
+:root{
+    --mainColor: #16678E;
+    --headColor: #494A4A;
+    --scondaryColor: #102E51;
+}
+@font-face{
+    font-family: 'cairo';
+    src: url('../webfonts/Cairo-Bold.ttf');
+}
+body{
+    font-family: 'cairo';
+    background-color: #F1F5F9;
+}
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*My Frame Work*/
+
+.section-padding{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* small */
+@media (min-width:768px){
+    .container{
+        width:750px
+    }
+}
+/* medium */
+@media (min-width:992px){
+    .container{
+        width:970px
+    }
+}
+/* large */
+@media (min-width:1200px){
+    .container{
+        width:1170px
+    }
+}
+/* Start Header */
+.header{
+	z-index: 99;
+    height: 50px;
+    background-color: #16678E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 40px #494A4A;
+    color: white;
+}
+.header ul{
+    list-style: none;
+}
+.header h3{
+    font-weight: 600;
+    font-size:17px;
+    font-weight: bold;
+}
+.header ul li{
+    display: inline-block;
+    margin-left: 7px;
+    font-size: 12px;
+    position: relative;
+}
+.header ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s
+}
+.header ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width:0;
+    height: 2px;
+    background-color: #00BEAD;
+    transition: 0.5s
+}
+.header ul li a:hover::after{
+    width: 100%;
+}
+.header .col{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap
+}
+/* End header */
+.cont {
+	text-align: center;
+	width: 100%;
+	height: calc(100vh - 50px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.cont h2 {
+	margin: 0;
+	line-height: 1.6;
+}
